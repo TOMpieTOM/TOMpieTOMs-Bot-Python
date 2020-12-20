@@ -10,6 +10,10 @@ client = commands.Bot(command_prefix='.')
 async def on_ready():
     print('ingelogd als: ' + client.user.name + "\n")
 
+@client.event
+async def on_ready():
+  await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name="Minecraft"))
+  print("Bot is klaar.")
 
 @client.command()
 async def ping(ctx):
