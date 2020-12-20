@@ -6,7 +6,6 @@ from keep_alive import keep_alive
 
 client = commands.Bot(command_prefix='.')
 
-
 @client.event
 async def on_ready():
     print('ingelogd als: ' + client.user.name + "\n")
