@@ -24,7 +24,7 @@ async def ping(ctx):
 async def _8ball(ctx, *, question):
     responses = ['Natuurlijk', 'Oja zeker.', 'Nee natuurlijk niet.']
 
-    await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+    await ctx.send(f'Vraag: {question}\nAntwoord: {random.choice(responses)}')
 
 
 @client.command()
@@ -35,6 +35,8 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 @client.command()
 async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
+
+
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
